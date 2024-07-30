@@ -30,23 +30,23 @@
       <artifactId>jsr311-api</artifactId>
       <version>1.1.1</version>
     </dependency>
-      <!-- IBM maintained version of 1.9.13-->
     <dependency>
-        <groupId>io.openliberty.org.codehaus.jackson</groupId>
+        <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-mapper-asl</artifactId>
-        <version>1.9.13.1</version>
+        <!-- Note: Liberty's runtime has an IBM maintained version of Jackson that has all known CVEs patched -->
+        <version>1.9.13</version>
         <scope>provided</scope>
     </dependency>
     <dependency>
-        <groupId>io.openliberty.org.codehaus.jackson</groupId>
+        <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-core-asl</artifactId>
-        <version>1.9.13.1</version>
+        <version>1.9.13</version>
         <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>io.openliberty.org.codehaus.jackson</groupId>
+      <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-jaxrs</artifactId>
-      <version>1.9.13.1</version>
+      <version>1.9.13</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
