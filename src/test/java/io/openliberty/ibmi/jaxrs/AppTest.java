@@ -9,16 +9,11 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     * @throws IOException 
-     * @throws JsonMappingException 
-     * @throws JsonGenerationException 
+
+    /* 
+     * Test default json serialization.
      */
     @Test
     public void testJsonSerialization() throws JsonGenerationException, JsonMappingException, IOException
@@ -27,13 +22,15 @@ public class AppTest
         person.setNAME("Adam");
 
         ObjectMapper om = new ObjectMapper();
-        // om.setPropertyNamingStrategy(new CaseInsensitiveNamingStrategy());
         
         String jsonString = om.writeValueAsString(person);
         System.out.println(jsonString);
-        // assertTrue( jsonString.contains("NAME") );
+        assertTrue( jsonString.contains("name") ); // by default, Jackson lower cases all UPPERCASE variables
     }
 
+    /*
+     * Test json serialization with our custom PropertyNamingStrategy
+     */
     @Test
     public void testJsonSerializationWithCustomNamingStrategy() throws JsonGenerationException, JsonMappingException, IOException
     {
@@ -45,6 +42,6 @@ public class AppTest
         
         String jsonString = om.writeValueAsString(person);
         System.out.println(jsonString);
-        assertTrue( jsonString.contains("NAME") );
+        assertTrue( jsonString.contains("NAME") ); // Jackson shouldn't lowercase UPPERCASE variables with our custom PropertyNamingStrategy
     }
 }
