@@ -7,3 +7,17 @@ Additionally, custom Liberty features are included to add the JAX-RS provider to
 ## Building
 
 Simply execute `mvn install`
+
+## Deploying
+
+Copy `CustomFeature.mf` to `/usr/extension/lib/features`
+
+Copy `target/customjacksonprovider-1.0.jar` to `usr/extension/lib`
+
+Add `<feature>usr:JacksonCaseInsensitiveJaxRsProviderFeature</feature>` to your `server.xml`
+```
+    <featureManager>
+        <feature>jaxrs-1.1</feature>
+        <feature>usr:JacksonCaseInsensitiveJaxRsProviderFeature</feature>
+    </featureManager>
+```
