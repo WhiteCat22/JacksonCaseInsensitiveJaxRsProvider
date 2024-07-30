@@ -1,4 +1,4 @@
-package io.openliberty.ibmi.jaxrs;
+package io.openliberty.jaxrs;
 
 import static org.junit.Assert.assertTrue;
 

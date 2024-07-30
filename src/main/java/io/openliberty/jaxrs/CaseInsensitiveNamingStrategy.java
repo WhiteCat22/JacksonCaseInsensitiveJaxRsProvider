@@ -1,4 +1,4 @@
-package io.openliberty.ibmi.jaxrs;
+package io.openliberty.jaxrs;
 
 import org.codehaus.jackson.map.MapperConfig;
 import org.codehaus.jackson.map.PropertyNamingStrategy;

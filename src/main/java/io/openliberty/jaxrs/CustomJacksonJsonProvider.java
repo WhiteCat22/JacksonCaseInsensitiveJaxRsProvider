@@ -1,4 +1,4 @@
-package io.openliberty.ibmi.jaxrs;
+package io.openliberty.jaxrs;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;

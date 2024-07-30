@@ -1,4 +1,4 @@
-package io.openliberty.ibmi.jaxrs;
+package io.openliberty.jaxrs;
 
 public class Person {
 
