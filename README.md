@@ -1,4 +1,4 @@
-# Jackson Case Insensiteve JAX-RS Provider
+# Jackson Case Insensitive JAX-RS Provider
 
 This project is an example of how you can create a custom `PropertyNamingStrategy` to control how Jackson serializes/deserializes json. Included is a JAX-RS `MessageBodyReader`/`MessageBodyWriter` that uses an `ObjectMapper` configured with the custom `PropertyNamingStrategy` to serialize/deserialize JAX-RS payloads.
 
