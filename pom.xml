@@ -7,6 +7,7 @@
   <groupId>io.openliberty.jaxrs</groupId>
   <artifactId>customjacksonprovider</artifactId>
   <version>1.0</version>
+  <packaging>bundle</packaging> <!-- required to activate the maven-bundle-plugin -->
 
   <name>JacksonCaseInsensitiveJaxRsProvider</name>
   <url>https://github.com/WhiteCat22/JacksonCaseInsensitiveJaxRsProvider</url>
@@ -99,5 +100,21 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <!-- This needs to be outside of <pluginManagement> -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>5.1.9</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+                <!-- This is how we set the Bundle-SymbolicName in the MANIFEST.MF -->
+                <Bundle-SymbolicName>JacksonCaseInsensitiveJaxRsProvider</Bundle-SymbolicName>
+                <Bundle-Version>1.0.0</Bundle-Version>
+            </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
